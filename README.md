@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ AYUSHJC.EXE — Neo-Brutalist Developer Portfolio
 
-## Getting Started
+A high-impact, interactive developer portfolio built with a **Neo-Brutalist** aesthetic. This project prioritizes raw performance, "system-style" interactivity, and a personality-driven user experience.
 
-First, run the development server:
+![Portfolio Preview](https://your-deployment-url.com/og-image.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Layer            | Technology                               |
+| :--------------- | :--------------------------------------- |
+| **Framework** | Next.js 14 (App Router)                  |
+| **Styling** | Tailwind CSS                             |
+| **Animations** | Framer Motion                            |
+| **Icons** | Lucide React                             |
+| **Deployment** | Vercel                                   |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Key Features
 
-## Learn More
+### 1. Interactive System Hero
+* **Reactive Cursor:** A custom-built cursor that morphs and changes blend modes based on hover targets.
+* **System Status:** Real-time "Online" indicator and dynamic "CODE" watermark.
+* **Database View:** A unique take on project navigation styled as a system query.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Neo-Brutalist UI Components
+* **Hard-Shadow Cards:** Components use the `shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]` utility for that signature brutalist look.
+* **High Contrast:** A curated palette of **Electric Yellow (#FBFF48)**, **Matrix Green**, and Deep Black.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. "System Log" Experience
+* A terminal-styled professional history section that mimics a `cat experience.log` command.
+* Includes animated line-drawing for the career timeline.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Live Tech Stack Grid
+* A categorized grid showing expertise across Libraries, Frameworks, and Languages.
+* Interactive hover states that display "System Optimization" stats.
 
-## Deploy on Vercel
+### 5. Transmission Contact Form
+* A "Let's Talk Code" module styled as a data payload transmission.
+* Fully responsive and validated inputs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📂 Project Structure
+
+```text
+├── src/
+│   ├── app/            # Next.js App Router (Layouts & Pages)
+│   ├── components/     # Atomic UI components (Buttons, Cards, Cursor)
+│   ├── hooks/          # Custom hooks (useMousePosition, etc.)
+│   ├── styles/         # Global CSS and Tailwind configurations
+│   └── lib/            # Shared utilities and constants
+├── public/             # Static assets (Avatars, SVGs)
+└── prd/                # Documentation & Roadmap
