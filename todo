@@ -1,0 +1,40 @@
+# Portfolio Project Todos
+
+## Phase 1: Project Setup & Configuration
+- [x] Initialize Next.js 14+ project (`npx create-next-app@latest`)
+- [x] Setup Tailwind CSS
+- [x] Install dependencies: `framer-motion`, `lucide-react`, `@tanstack/react-query`
+- [x] Configure global fonts (Sans-serif like Inter/Archivo Black, Monospace like JetBrains Mono/Fira Code)
+- [x] Define global Neo-Brutalist CSS utilities (colors, borders, hard drop shadows, dot-grid background)
+
+## Phase 2: Core UI Components & Infrastructure
+- [x] Build global layout with dot-grid pattern
+- [x] Create custom `<CustomCursor />` component with Framer Motion (mix-blend-mode: difference to hover states)
+- [x] Implement reusable Neo-Brutalist elements (Cards, Buttons, Inputs) with solid borders and hard shadows
+
+## Phase 3: Page Sections Implementation
+- [x] **Interactive Landing (Hero)**
+  - [x] Implement "system status" typography
+  - [x] Add reactive hover elements
+- [x] **Dynamic Tech Stack**
+  - [x] Build a grid layout for skills
+  - [x] Implement hover-triggered state changes
+- [x] **Work/Project Gallery**
+  - [x] Create high-visibility cards for projects
+  - [x] Add links to live sites and GitHub repositories
+- [x] **System Log / Experience**
+  - [x] Design chronological history section styled as a terminal/system log
+- [x] **Lead Capture (Contact Form)**
+  - [x] Build "Let's Talk Code" form with inputs and validation
+  - [x] Add visual feedback for successful transmission
+
+## Phase 4: Data Integration
+- [ ] Setup TanStack Query for API calls
+- [ ] Integrate GitHub API for live real-time contributions count
+- [ ] Integrate LeetCode API (or unofficial endpoints) for problem counts
+- [ ] Display live stats on specific cards
+
+## Phase 5: Polish & Deployment
+- [ ] Review Accessibility (contrast ratios) and ensure responsiveness (mobile support)
+- [ ] Optimize performance (sub-1s initial load, 60fps animations)
+- [ ] Deploy to Vercel

@@ -1,0 +1,74 @@
+2. Design Document
+Visual Language: Neo-Brutality
+Color Palette: * Primary: #FBFF48 (Electric Yellow) for highlights.
+
+Background: #FFFFFF (Main) / #000000 (Contrast sections).
+
+Accents: #00FF41 (Matrix Green) for status indicators.
+
+Typography: * Headings: Bold, uppercase Sans-Serif (e.g., Inter Black or Archivo Black).
+
+Body/Code: Monospace fonts (e.g., JetBrains Mono or Fira Code).
+
+UI Components:
+
+Borders: 2px to 4px solid black (#000000).
+
+Shadows: Hard "drop" shadows (offset, no blur) for buttons and cards.
+
+Grid: Visible dot-grid background patterns.
+
+The "Signature" Cursor Logic
+As seen in your screenshots, the custom cursor is the star.
+
+Default State: Small white circle with mix-blend-mode: difference.
+
+Hover State: Expands to a large yellow circle (#FBFF48), removes the blend mode, and adds a solid black border.
+
+Implementation Starter: The Custom Cursor
+The JavaScript in your screenshots is the "secret sauce." Here is the React/Framer Motion version of that logic to get you started:
+
+JavaScript
+// components/CustomCursor.jsx
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
+export default function CustomCursor() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
+    // Global listener for "hover" elements
+    const handleMouseOver = (e) => {
+      if (e.target.closest('.hover-target')) setIsHovering(true);
+    };
+    const handleMouseOut = () => setIsHovering(false);
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener('mouseout', handleMouseOut);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseover', handleMouseOver);
+      window.removeEventListener('mouseout', handleMouseOut);
+    };
+  }, []);
+
+  return (
+    <motion.div
+      className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full"
+      animate={{
+        x: mousePos.x - (isHovering ? 30 : 12),
+        y: mousePos.y - (isHovering ? 30 : 12),
+        width: isHovering ? '60px' : '24px',
+        height: isHovering ? '60px' : '24px',
+        backgroundColor: isHovering ? '#FBFF48' : '#fff',
+        border: isHovering ? '2px solid black' : 'none',
+        mixBlendMode: isHovering ? 'normal' : 'difference'
+      }}
+      transition={{ type: 'spring', damping: 20, stiffness: 250, mass: 0.5 }}
+    />
+  );
+}

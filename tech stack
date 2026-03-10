@@ -1,0 +1,10 @@
+3. Recommended Tech Stack
+To achieve this level of interaction while keeping the site maintainable and fast:
+
+Layer	Technology	Why?
+Frontend -	Next.js 14+ (React)	Server-side rendering for SEO and fast initial paint.
+Styling  -	Tailwind CSS	Best for Neo-Brutalist design (e.g., border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]).
+Animations  -	Framer Motion	Essential for the smooth entry animations and the reactive cursor logic.
+Icons -	Lucide React	Clean, stroke-based icons that fit the technical aesthetic.
+Data Fetching -	TanStack Query	To handle the live GitHub/LeetCode API calls with caching.
+Deployment -	Vercel	Seamless integration with Next.js and global CDN.

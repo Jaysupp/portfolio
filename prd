@@ -1,0 +1,24 @@
+1. Product Requirement Document (PRD)
+Project Name: AyushJC.exe - Interactive Developer Portfolio
+
+Objective: To showcase technical expertise through a high-performance, visually striking, and interactive web experience that converts visitors into leads (clients or recruiters).
+
+Core Features
+Interactive Landing: A "system status" hero section with high-impact typography and reactive cursor elements.
+
+Dynamic Tech Stack: A grid-based skill showcase with hover-triggered state changes.
+
+Work/Project Gallery: High-visibility cards for "Selected Works" with direct links to live sites and repositories.
+
+Live Stats Integration: API-driven cards showing real-time GitHub contributions and LeetCode problem counts.
+
+System Log/Experience: A chronological list of professional history styled as a terminal or system log.
+
+Lead Capture: A "Let's Talk Code" contact form with validation and successful "transmission" feedback.
+
+User Experience (UX) Goals
+Micro-interactions: Every button, card, and input should react to the user (the "sell" code in your images).
+
+Performance: Sub-1s initial load time; smooth animations even on mobile.
+
+Accessibility: High contrast ratios (typical of Neo-Brutalism) for readability.
