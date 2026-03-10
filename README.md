@@ -1,4 +1,4 @@
-# ⚡ AYUSHJC.EXE — Neo-Brutalist Developer Portfolio
+# ⚡ AYUSHJC.EXE
 
 A high-impact, interactive developer portfolio built with a **Neo-Brutalist** aesthetic. This project prioritizes raw performance, "system-style" interactivity, and a personality-driven user experience.
 
