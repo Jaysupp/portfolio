@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const skillsRow1 = [
-  { name: "REACT", category: "LIBRARY" },
-  { name: "NEXT.JS", category: "FRAMEWORK" },
+  { name: "REACT.JS", category: "FRAMEWORK" },
+  { name: "NODE.JS", category: "FRAMEWORK" },
   { name: "PYTHON", category: "LANGUAGE" },
-  { name: "NODE.JS", category: "BACKEND" },
-  { name: "PHP", category: "LANGUAGE" },
-  { name: "MYSQL", category: "DATA" },
-  { name: "HTML5", category: "CORE" },
-  { name: "GIT", category: "VERSION" },
+  { name: "JAVA", category: "LANGUAGE" },
+  { name: "C++", category: "LANGUAGE" },
+  { name: "C#", category: "LANGUAGE" },
+  { name: "JAVASCRIPT", category: "LANGUAGE" },
+  { name: "TYPESCRIPT", category: "LANGUAGE" }, // Optional addition or replacement if 8 is hard limit per row
 ];
 
 const skillsRow2 = [
-  { name: "GRAPHQL", category: "QUERY" },
-  { name: "GITHUB", category: "API" },
-  { name: "JAVA", category: "LANGUAGE" },
-  { name: "DJANGO", category: "FRAMEWORK" },
-  { name: "TYPESCRIPT", category: "LANGUAGE" },
-  { name: "LARAVEL", category: "FRAMEWORK" },
-  { name: "THREE.JS", category: "3D" },
-  { name: "C++", category: "LANGUAGE" },
+  { name: "UNITY", category: "TOOL" },
+  { name: "JUNIT", category: "FRAMEWORK" },
+  { name: "SELENIUM", category: "FRAMEWORK" },
+  { name: "MONGODB", category: "DATABASE" },
+  { name: "MYSQL", category: "DATABASE" },
+  { name: "POSTMAN", category: "TOOL" },
+  { name: "GITHUB", category: "TOOL" },
+  { name: "ECLIPSE", category: "TOOL" },
 ];
 
 const colors = [
@@ -59,7 +59,7 @@ export function SkillsSection() {
             TECH<span className="text-green-500">_STACK</span>
           </h2>
           <div className="hidden md:flex items-center gap-2 font-mono text-[10px] md:text-xs uppercase text-gray-400">
-             <span className="w-2 h-2 rounded-full bg-red-500"></span>
+            <span className="w-2 h-2 rounded-full bg-red-500"></span>
              /// SYSTEM_OPTIMIZED
           </div>
         </div>
@@ -80,7 +80,7 @@ export function SkillsSection() {
                     color: hoveredSkill === skill.name ? "black" : "white"
                   }}
                 >
-                  <span 
+                  <span
                     className="mb-2 font-mono text-[10px] md:text-xs font-bold uppercase transition-colors duration-0"
                     style={{ color: hoveredSkill === skill.name ? "black" : "rgb(20, 184, 166)" }} // tailwind teal-500 equivalent
                   >
@@ -106,7 +106,7 @@ export function SkillsSection() {
                     color: hoveredSkill === skill.name ? "black" : "white"
                   }}
                 >
-                  <span 
+                  <span
                     className="mb-2 font-mono text-[10px] md:text-xs font-bold uppercase transition-colors duration-0"
                     style={{ color: hoveredSkill === skill.name ? "black" : "rgb(20, 184, 166)" }}
                   >
@@ -123,8 +123,8 @@ export function SkillsSection() {
 
         {/* Footer info */}
         <div className="mt-4 flex justify-between font-mono text-[10px] md:text-xs text-gray-500 uppercase">
-           <span>TOTAL MARKERS: 16</span>
-           <span>MEMORY USAGE: [LOW]</span>
+          <span>TOTAL MARKERS: 16</span>
+          <span>MEMORY USAGE: [LOW]</span>
         </div>
       </div>
     </section>

@@ -41,10 +41,11 @@ export function ContactSection() {
               <Input label="Name" required placeholder="Enter your designation" />
               <Input label="Email" type="email" required placeholder="Email vector" />
             </div>
-            
+
             <div className="flex flex-col gap-2">
-              <label className="font-heading text-sm uppercase tracking-wider">Payload</label>
+              <label htmlFor="payload" className="font-heading text-sm uppercase tracking-wider">Payload</label>
               <textarea
+                id="payload"
                 required
                 rows={5}
                 placeholder="Enter transmission data here..."

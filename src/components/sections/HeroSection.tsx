@@ -48,7 +48,7 @@ export function HeroSection() {
             JC
           </h1>
           <h1 className="font-heading text-6xl text-transparent uppercase leading-[0.85] tracking-tighter md:text-[8rem] lg:text-[10rem] hover-target"
-              style={{ WebkitTextStroke: "2px black" }}>
+            style={{ WebkitTextStroke: "2px black" }}>
             AYUSH
           </h1>
         </motion.div>
@@ -68,7 +68,6 @@ export function HeroSection() {
           </p>
         </motion.div>
 
-        {/* Action Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,9 +77,13 @@ export function HeroSection() {
           <Button variant="dark" className="px-8 py-4 !text-base brutal-shadow">
             VIEW DATABASE
           </Button>
-          <Button variant="outline" className="flex items-center gap-2 bg-white px-8 py-4 !text-base brutal-border brutal-shadow">
+          <a
+            href="/resume.pdf"
+            download="Ayush_Resume.pdf"
+            className="flex items-center gap-2 bg-white px-8 py-4 !text-base brutal-border brutal-shadow font-heading text-sm uppercase tracking-wider brutal-shadow-hover hover-target transition-colors"
+          >
             <Download className="h-5 w-5" /> DOWNLOAD CV
-          </Button>
+          </a>
         </motion.div>
       </div>
     </section>

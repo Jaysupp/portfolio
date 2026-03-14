@@ -27,14 +27,7 @@
 - [x] **Lead Capture (Contact Form)**
   - [x] Build "Let's Talk Code" form with inputs and validation
   - [x] Add visual feedback for successful transmission
-
-## Phase 4: Data Integration
-- [ ] Setup TanStack Query for API calls
-- [ ] Integrate GitHub API for live real-time contributions count
-- [ ] Integrate LeetCode API (or unofficial endpoints) for problem counts
-- [ ] Display live stats on specific cards
-
-## Phase 5: Polish & Deployment
-- [ ] Review Accessibility (contrast ratios) and ensure responsiveness (mobile support)
-- [ ] Optimize performance (sub-1s initial load, 60fps animations)
-- [ ] Deploy to Vercel
+## Phase 4: Polish & Deployment
+- [x] Review Accessibility (contrast ratios) and ensure responsiveness (mobile support)
+- [x] Optimize performance (sub-1s initial load, 60fps animations)
+- [x] Deploy to Vercel

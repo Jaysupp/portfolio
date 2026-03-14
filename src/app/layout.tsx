@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AyushJC.exe | Developer Portfolio",
+  title: "AYUSHJC.EXE",
   description: "Interactive Developer Portfolio of Ayush",
 };
 

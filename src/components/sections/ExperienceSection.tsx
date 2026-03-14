@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal } from "lucide-react";
 
 const experiences = [
   {
@@ -10,9 +9,9 @@ const experiences = [
     company: "TechNova Inc.",
     date: "2023 - Present",
     log: [
-      "> initialized neo-architecture for core product",
-      "> migrated legacy monolith to next.js microservices",
-      "> performance output increased by 400%",
+      "initialized neo-architecture for core product",
+      "migrated legacy monolith to next.js microservices",
+      "performance output increased by 400%",
     ],
   },
   {
@@ -21,71 +20,82 @@ const experiences = [
     company: "Creative Studio X",
     date: "2021 - 2023",
     log: [
-      "> engineered interactive web experiences for fortune 500 clients",
-      "> masterminded the custom animation engine using framer motion",
-      "> zero critical bugs in production across 15+ deployments",
+      "engineered interactive web experiences for fortune 500 clients",
+      "masterminded the custom animation engine using framer motion",
+      "zero critical bugs in production across 15+ deployments",
     ],
   },
 ];
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="border-b-[3px] border-black bg-black p-8 text-white md:p-16">
-      <div className="mb-12 flex items-center gap-4">
-        <Terminal className="h-10 w-10 text-[var(--color-accent)]" />
-        <h2 className="font-heading text-5xl uppercase hover-target">System_Log</h2>
-      </div>
+    <section id="experience" className="border-b-[3px] border-black py-16 md:py-24 relative overflow-hidden">
+      {/* Container */}
+      <div className="mx-auto max-w-[1000px] px-4 sm:px-8 relative z-10">
 
-      <div className="mx-auto max-w-4xl border-[3px] border-[var(--color-accent)] bg-black p-6 font-mono brutal-shadow-lg shadow-[var(--color-accent)]">
-        <div className="mb-6 flex items-center gap-2 border-b-[3px] border-[var(--color-accent)] pb-4 text-[var(--color-accent)]">
-          <div className="h-3 w-3 rounded-full bg-red-500"></div>
-          <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-          <div className="h-3 w-3 rounded-full bg-green-500"></div>
-          <span className="ml-4 text-sm">ayush@system:~ $ cat experience.log</span>
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-24 flex flex-col items-center">
+          <h2 className="font-heading text-5xl md:text-7xl uppercase tracking-tighter flex items-center justify-center relative">
+            EXPERIENCE<span className="text-red-500">_LOG</span>
+          </h2>
         </div>
 
-        <div className="space-y-12">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="relative pl-8 before:absolute before:bottom-0 before:left-0 before:top-2 before:w-[3px] before:bg-[var(--color-accent)]"
-            >
-              <div className="absolute -left-[6px] top-2 h-[15px] w-[15px] border-[3px] border-[var(--color-accent)] bg-black"></div>
-              
-              <div className="mb-2 flex flex-col justify-between sm:flex-row sm:items-end">
-                <h3 className="font-heading text-2xl uppercase text-[var(--color-primary)]">
-                  {exp.role}
-                </h3>
-                <span className="text-sm font-bold opacity-70">
-                  [{exp.date}]
-                </span>
-              </div>
-              <p className="mb-4 text-lg font-bold uppercase underline decoration-[var(--color-accent)] decoration-2 underline-offset-4">
-                @ {exp.company}
-              </p>
-              <ul className="space-y-2 opacity-80">
-                {exp.log.map((entry, i) => (
-                  <li key={i}>{entry}</li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-          
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8 }}
-            className="mt-8 flex items-center gap-2 text-[var(--color-accent)]"
-          >
-            <span>ayush@system:~ $</span>
-            <span className="animate-pulse">_</span>
-          </motion.div>
+        {/* Timeline container */}
+        <div className="relative">
+          {/* Main vertical line */}
+          <div className="absolute left-[16px] md:left-[24px] top-2 bottom-6 w-[3px] bg-black"></div>
+
+          {/* Experience items */}
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={exp.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="relative pl-12 md:pl-20"
+              >
+                {/* Timeline node */}
+                <div className="absolute left-[9px] md:left-[17px] top-6 w-[17px] h-[17px] bg-[#FFCC00] border-[3px] border-black brutal-shadow-sm z-10"></div>
+
+                {/* Content Box */}
+                <div className="bg-white border-[3px] border-black p-6 md:p-8 brutal-shadow group transition-all duration-300 hover:brutal-shadow-hover">
+
+                  {/* Item Header */}
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                    <div>
+                      <h3 className="font-heading text-xl md:text-2xl uppercase text-black leading-tight">
+                        {exp.role}
+                      </h3>
+                      {exp.company && (
+                        <p className="font-mono text-sm md:text-base font-bold text-gray-600 mt-1 uppercase">
+                          {exp.company}
+                        </p>
+                      )}
+                    </div>
+
+                    <span className="bg-black text-white px-3 py-1 font-mono text-xs md:text-sm font-bold uppercase whitespace-nowrap brutal-border self-start">
+                      {exp.date}
+                    </span>
+                  </div>
+
+                  {/* Log entries */}
+                  <ul className="space-y-3">
+                    {exp.log.map((entry, i) => (
+                      <li key={i} className="flex gap-3 font-mono text-sm md:text-base text-gray-800">
+                        <span className="text-red-500 font-bold shrink-0">{'>'}</span>
+                        <span>{entry}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
+
       </div>
     </section>
   );

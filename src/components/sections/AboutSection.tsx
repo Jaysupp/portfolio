@@ -20,9 +20,9 @@ export function AboutSection() {
               </div>
               {/* Placeholder for the avatar illustration */}
               <div className="absolute inset-0 bg-gray-100 flex items-center justify-center p-4">
-                 <div className="w-full h-full border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 font-mono text-sm text-center">
-                   Replace with illustration
-                 </div>
+                <div className="w-full h-full border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 font-mono text-sm text-center">
+                  Replace with illustration
+                </div>
               </div>
             </div>
 
@@ -31,7 +31,7 @@ export function AboutSection() {
               <h2 className="mb-6 font-heading text-5xl md:text-6xl uppercase tracking-tight">
                 WHO AM I?
               </h2>
-              
+
               <p className="mb-6 font-mono text-lg leading-relaxed text-gray-800">
                 I am Ayush. A creative developer who believes the web has become too sanitized. I bring <span className="bg-[var(--color-primary)] px-2 py-1 border-2 border-black font-bold text-black">personality</span> back to code.
               </p>
@@ -39,7 +39,7 @@ export function AboutSection() {
               <div className="mb-8 font-mono text-base text-gray-600 space-y-2 border-l-4 border-gray-300 pl-4">
                 <p>&gt; Specialized in Designing and Web Development.</p>
                 <p>&gt; Obsessed with Perfection and AI.</p>
-                <p>&gt; 3+ years of shipping code that works.</p>
+                <p>&gt; Passionate about game development.</p>
               </div>
 
               <div className="flex flex-wrap gap-4">
