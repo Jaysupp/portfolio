@@ -29,7 +29,7 @@ const experiences = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="border-b-[3px] border-black py-16 md:py-24 relative overflow-hidden">
+    <section id="experience" className="py-16 md:py-24 relative overflow-hidden">
       {/* Container */}
       <div className="mx-auto max-w-[1000px] px-4 sm:px-8 relative z-10">
 

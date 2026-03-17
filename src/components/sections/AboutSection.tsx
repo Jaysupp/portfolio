@@ -18,11 +18,13 @@ export function AboutSection() {
               <div className="absolute top-4 left-4 z-10 bg-[#FF3B30] text-white text-xs font-mono font-bold px-2 py-1 uppercase brutal-border">
                 AVATAR.JPG
               </div>
-              {/* Placeholder for the avatar illustration */}
-              <div className="absolute inset-0 bg-gray-100 flex items-center justify-center p-4">
-                <div className="w-full h-full border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 font-mono text-sm text-center">
-                  Replace with illustration
-                </div>
+              {/* Avatar Image */}
+              <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+                <img
+                  src="/avatar.png"
+                  alt="Ayush Avatar"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
