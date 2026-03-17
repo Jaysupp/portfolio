@@ -1,7 +1,7 @@
 "use client";
 
 import { Card } from "@/components/Card";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -62,18 +62,9 @@ export function ProjectsSection() {
               )}
 
               <div className="flex flex-col flex-grow">
-                {/* Title and Link Button */}
+                {/* Title */}
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-heading text-2xl md:text-3xl uppercase font-bold text-black tracking-tight">{project.title}</h3>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-shrink-0 w-10 h-10 border-[3px] border-black bg-[#34C759] flex items-center justify-center hover:bg-[#34C759]/80 transition-colors brutal-shadow-sm"
-                    aria-label={`View ${project.title} live`}
-                  >
-                    <ExternalLink className="h-5 w-5 text-black" />
-                  </a>
                 </div>
 
                 {/* Description */}
@@ -89,11 +80,36 @@ export function ProjectsSection() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="bg-black text-white px-2 py-1 font-mono text-xs font-bold"
+                      className="bg-gray-200 text-black px-2 py-1 font-mono text-xs font-bold uppercase"
                     >
                       {t}
                     </span>
                   ))}
+                </div>
+
+                {/* Divider */}
+                <hr className="border-[1.5px] border-black my-6 bg-black" />
+
+                {/* Actions */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 border-[3px] border-black bg-white px-2 py-3 font-heading text-sm md:text-base font-bold uppercase hover:bg-gray-100 transition-colors brutal-shadow-sm hover:brutal-shadow-hover text-black"
+                  >
+                    <Github className="h-5 w-5" />
+                    Source Code
+                  </a>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 border-[3px] border-black bg-[var(--color-primary)] px-2 py-3 font-heading text-sm md:text-base font-bold uppercase hover:bg-[var(--color-primary)]/80 transition-colors brutal-shadow-sm hover:brutal-shadow-hover text-black"
+                  >
+                    <ExternalLink className="h-5 w-5" />
+                    Live Demo
+                  </a>
                 </div>
               </div>
             </Card>
