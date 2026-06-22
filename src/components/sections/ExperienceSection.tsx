@@ -5,24 +5,12 @@ import { motion } from "framer-motion";
 const experiences = [
   {
     id: "01",
-    role: "Senior Full-Stack Engineer",
-    company: "TechNova Inc.",
-    date: "2023 - Present",
+    role: "Summer Internship / Training",
+    company: "CipherSchools – Data Structures & Algorithms (DSA)",
+    date: "",
     log: [
-      "initialized neo-architecture for core product",
-      "migrated legacy monolith to next.js microservices",
-      "performance output increased by 400%",
-    ],
-  },
-  {
-    id: "02",
-    role: "Software Developer",
-    company: "Creative Studio X",
-    date: "2021 - 2023",
-    log: [
-      "engineered interactive web experiences for fortune 500 clients",
-      "masterminded the custom animation engine using framer motion",
-      "zero critical bugs in production across 15+ deployments",
+      "Gained knowledge of DSA concepts including sorting algorithms, dynamic programming, trees, graphs, and linked lists.",
+      "Enhanced algorithmic thinking by solving problem-solving challenges.",
     ],
   },
 ];
@@ -75,9 +63,11 @@ export function ExperienceSection() {
                       )}
                     </div>
 
-                    <span className="bg-black text-white px-3 py-1 font-mono text-xs md:text-sm font-bold uppercase whitespace-nowrap brutal-border self-start">
-                      {exp.date}
-                    </span>
+                    {exp.date && (
+                      <span className="bg-black text-white px-3 py-1 font-mono text-xs md:text-sm font-bold uppercase whitespace-nowrap brutal-border self-start">
+                        {exp.date}
+                      </span>
+                    )}
                   </div>
 
                   {/* Log entries */}
