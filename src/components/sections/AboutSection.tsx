@@ -1,17 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export function AboutSection() {
   return (
-    <section id="about" className="border-b-[3px] border-black p-4 py-16 md:p-16 relative">
-      <div className="mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="border-[3px] border-black bg-white p-6 md:p-12 brutal-shadow"
-        >
+    <section id="about" className="snap-section flex min-h-[100vh] w-full items-center justify-center p-4 md:p-16">
+      <div className="section-inner mx-auto max-w-6xl w-full">
+        <div className="border-[3px] border-black bg-white p-6 md:p-12 brutal-shadow-lg noise-overlay">
           <div className="flex flex-col gap-12 md:flex-row md:items-start">
             {/* Avatar / Image Box */}
             <div className="relative aspect-square w-full max-w-xs shrink-0 border-[3px] border-black bg-white brutal-shadow group">
@@ -44,7 +37,7 @@ export function AboutSection() {
                 <p>&gt; Passionate about game development.</p>
               </div>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-6">
                 <div className="flex items-center gap-2 border-[3px] border-black bg-black px-4 py-2 text-white font-mono text-xs font-bold uppercase w-fit">
                   <span>📍 LOCATION: WORLDWIDE</span>
                 </div>
@@ -53,9 +46,20 @@ export function AboutSection() {
                   STATUS: AVAILABLE
                 </div>
               </div>
+
+              {/* Currently Learning / Working On Box */}
+              <div className="border-[3px] border-black bg-[var(--color-primary)] p-4 brutal-shadow-sm">
+                <h3 className="font-mono text-xs font-bold uppercase text-black mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 bg-red-500 rounded-full animate-ping"></span>
+                  CURRENTLY_BUILDING:
+                </h3>
+                <p className="font-mono text-sm text-gray-900 font-bold">
+                  Building an app that gamifies daily tasks in an RPG style.
+                </p>
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

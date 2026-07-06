@@ -3,6 +3,7 @@ import { Inter, Archivo_Black, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import { Header } from "@/components/Header";
+import { KonamiListener } from "@/components/KonamiListener";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${archivoBlack.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
+        <KonamiListener />
         <CustomCursor />
         <Header />
         {children}
